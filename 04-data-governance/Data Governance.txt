@@ -1,0 +1,51 @@
+###always_filter
+explore: order_items {
+
+  always_filter: {
+    filters: [
+      order_items.status: "Complete",
+      users.country: "USA"
+    ]
+  }
+
+}
+
+
+###sql_always_where
+explore: order_items {
+
+  sql_always_where:
+    ${created_date}
+    >=
+    '2021-01-01' ;;
+
+}
+
+###sql_always_having
+explore: order_items {
+
+  sql_always_having:
+    ${order_item_count}
+    =
+    1 ;;
+
+}
+
+
+###conditionally_filter
+explore: order_items {
+
+  conditionally_filter: {
+
+    filters: [
+      created_date: "3 years"
+    ]
+
+    unless: [
+      users.id,
+      users.state
+    ]
+
+  }
+
+}
