@@ -187,4 +187,3 @@ Through this project, I gained practical experience in:
 
 Wisnel François
 
-Skills: SQL • Python • BigQuery • Looker • Data Visualization • Statistical Analysis
