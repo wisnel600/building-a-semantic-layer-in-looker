@@ -1,0 +1,8 @@
+###Join a view to an existing Explore
+
+
+join: users_limited {
+  type: left_outer
+  sql_on: ${events.user_id} = ${users_limited.id} ;;
+  relationship: many_to_one
+}
